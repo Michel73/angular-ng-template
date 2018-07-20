@@ -7,4 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  entries = [
+    {
+      id: 1,
+      firstName: 'Hugo',
+      lastName: 'Meier'
+    },
+    {
+      id: 2,
+      firstName: 'Lisa',
+      lastName: 'Müller'
+    },
+    {
+      id: 3,
+      firstName: 'Fritz',
+      lastName: 'Fischer'
+    }
+  ]
 }
