@@ -7,4 +7,12 @@
 </div>
 <h2>Your list: </h2>
 
-<app-list [entries]="entries"></app-list>
+<app-list [entries]="entries">
+  <ng-template #entriesTemplate>
+    <ul>
+      <li *ngFor="let entry of entries">
+        {{ entry.firstName }} {{ entry.lastName }}
+      </li>
+    </ul>
+  </ng-template>
+</app-list>

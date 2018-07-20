@@ -1,5 +1,10 @@
-<ul>
-  <li *ngFor="let entry of entries">
-    {{ entry | json }}
-  </li>
-</ul>
+<div *ngIf="!hasCustomTemplate">
+  <ul>
+    <li *ngFor="let entry of entries">
+      {{ entry | json }}
+    </li>
+  </ul>
+</div>
+<div *ngIf="hasCustomTemplate">
+  <ng-template [ngTemplateOutlet]="entriesTemplate"></ng-template>
+</div>
